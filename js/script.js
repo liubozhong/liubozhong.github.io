@@ -42,9 +42,10 @@ var pages = function(obj) {
         if(moveY > 50) n--;
         //最后&最前页控制
         if(n < 0) n = 0;
-        if(n > len - 1) n = len - 1;
+        if(n > len - 1) n = 0;
         //重定位
         box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
+        $('.img-text').html(n + 1);
     };
     //touch事件绑定
     box.addEventListener("touchstart", function(event) {
@@ -73,7 +74,7 @@ function load() {
                 pages({
                     wrap: 'wrap', //.wrap的id
                     wrap2: 'wrap2', //.wrap2的id
-                    len: 6, //一共有几页
+                    len: max, //一共有几页
                     n: 0 //页面一打开默认在第几页？第一页就是0，第二页就是1
                 });
             }
