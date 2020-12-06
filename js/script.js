@@ -71,6 +71,7 @@ function load() {
             $('.load-count').html(count);
             if (count >= max) {
                 $('.load-wrap').hide();
+                $('.img-text').show();
                 pages({
                     wrap: 'wrap', //.wrap的id
                     wrap2: 'wrap2', //.wrap2的id
