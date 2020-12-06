@@ -7,20 +7,6 @@ document.body.addEventListener('touchmove', function(event) {
     }
 }, false);
 
-function layout() {
-    $('.photo').each(function(i) {
-        img = $(this)
-        $("<img/>").attr("src", $(this).attr("src")).load(function() {
-            w = this.width * (document.body.clientHeight / this.height);
-            $('.photo:eq(' + i + ')').css("margin-left", '-' + (w / 2) + 'px');
-        });
-
-    });
-
-}
-
-layout();
-
 var pages = function(obj) {
     var box = document.getElementById(obj.wrap);
     var box2 = document.getElementById(obj.wrap2);
@@ -72,9 +58,27 @@ var pages = function(obj) {
     }, false);
 }
 
-pages({
-    wrap: 'wrap', //.wrap的id
-    wrap2: 'wrap2', //.wrap2的id
-    len: 6, //一共有几页
-    n: 0 //页面一打开默认在第几页？第一页就是0，第二页就是1
-});
+function load() {
+    max = $('.photo').length;
+    $('.load-total').html(max);
+    count = 0;
+    $('.photo').each(function(i) {
+        $("<img/>").attr("src", $(this).attr("src")).load(function() {
+            img = $('.photo:eq(' + i + ')');
+            img.css('margin-left', '-' + ((img.width() - document.body.clientWidth) / 2) + 'px');
+            count++;
+            $('.load-count').html(count);
+            if (count >= max) {
+                $('.load-wrap').hide();
+                pages({
+                    wrap: 'wrap', //.wrap的id
+                    wrap2: 'wrap2', //.wrap2的id
+                    len: 6, //一共有几页
+                    n: 0 //页面一打开默认在第几页？第一页就是0，第二页就是1
+                });
+            }
+        });
+    });
+};
+
+load();
