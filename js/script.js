@@ -12,10 +12,10 @@ var pages = function(obj) {
     var box2 = document.getElementById(obj.wrap2);
     var len = obj.len;
     var n = obj.n;
-    var startY, moveY, cliH;
+    var startX, startY, moveY, moveX, cliH;
     //获取屏幕高度
     var getH = function() {
-        cliH = document.body.clientHeight
+        cliH = document.body.clientHeight;
     };
     getH();
     window.addEventListener('resize', getH, false);
@@ -24,6 +24,7 @@ var pages = function(obj) {
         if(!event.touches.length) {
             return;
         }
+        startX = event.touches[0].pageX;
         startY = event.touches[0].pageY;
         moveY = 0;
     };
@@ -32,14 +33,15 @@ var pages = function(obj) {
         if(!event.touches.length) {
             return;
         }
+        moveX = event.touches[0].pageX - startX;
         moveY = event.touches[0].pageY - startY;
         box2.style.transform = 'translateY(' + (-n * cliH + moveY) + 'px)'; //根据手指的位置移动页面
     };
     //touchEnd
     var touchend = function(event) {
         //位移小于+-50的不翻页
-        if(moveY < -50) n++;
-        if(moveY > 50) n--;
+        if(moveX < -50 || moveY < -50) n++;
+        if(moveX > 50 || moveY > 50) n--;
         //最后&最前页控制
         if(n < 0) n = 0;
         if(n > len - 1) n = 0;
