@@ -62,7 +62,10 @@ var pages = function(obj) {
 }
 
 function load() {
-    max = $('.photo').length;
+    max = 52;
+    for (var i = 2; i <= max; i++) {
+        $("#wrap2").append("<div class='page'><img class='photo' src='album/" + i + ".jpg' /></div>");
+    }
     $('.load-total').html(max);
     count = 0;
     $('.photo').each(function(i) {
