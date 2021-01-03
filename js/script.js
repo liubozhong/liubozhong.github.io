@@ -47,7 +47,8 @@ var pages = function(obj) {
         if(n > len - 1) n = 0;
         //重定位
         box2.style.transform = 'translateY(' + (-n * 10) + '%)'; //根据百分比位置移动页面
-        $('.img-text').html(n + 1);
+        $(".text-wrap").children().hide();
+        $('.text-' + (n + 1)).fadeIn();
     };
     //touch事件绑定
     box.addEventListener("touchstart", function(event) {
@@ -62,7 +63,7 @@ var pages = function(obj) {
 }
 
 function load() {
-    max = 51;
+    max = 8;
     for (var i = 2; i <= max; i++) {
         $("#wrap2").append("<div class='page'><img class='photo' src='album/" + i + ".jpg' /></div>");
     }
@@ -78,7 +79,7 @@ function load() {
                 $('.load-wrap').hide();
                 $('.img-text').show();
                 pages({
-                    wrap: 'wrap', //.wrap的id
+                    wrap: 'text-wrap', //.wrap的id
                     wrap2: 'wrap2', //.wrap2的id
                     len: max, //一共有几页
                     n: 0 //页面一打开默认在第几页？第一页就是0，第二页就是1
