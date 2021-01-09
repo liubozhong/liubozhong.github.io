@@ -41,7 +41,7 @@ var pages = function(obj) {
     var touchend = function(event) {
         //位移小于+-50的不翻页
         if(moveX < -50 || moveY < -50) n++;
-        if(moveX > 50 || moveY > 50) n--;
+        if(moveX > 50) n--;
         //最后&最前页控制
         if(n < 0) n = 0;
         if(n > len - 1) n = 0;
