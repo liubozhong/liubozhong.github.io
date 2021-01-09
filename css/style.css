@@ -23,6 +23,98 @@ body,html{height:100%;background-color:#000}
         text-align: center;
         font-weight: 700
     }
+    .page div {
+        float: left; background-color: #f2f2f2; background-position:center;
+        background-repeat: no-repeat; background-size: auto 100%;
+    }
+    .page-border {
+        background-color: #fff!important;
+    }
+    .page-2-1 {
+        width: 38%; height: 50%;
+        background-image: url("../album/2-1.jpg");
+    }
+    .page-2-2 {
+        width: 60%; height: 30%; float: right!important;
+        background-image: url("../album/2-2.jpg");
+    }
+    .border-2-1 {
+        width: 100%; height: 1%;
+    }
+    .page-2-3 {
+        width: 100%; height: 49%;
+        background-image: url("../album/2-3.jpg");
+    }
+    .page-3-1 {
+        width: 50%; height: 39%; float: right!important;
+        background-image: url("../album/3-1.jpg");
+    }
+    .border-3-1 {
+        width: 100%; height: 1%;
+    }
+    .page-3-2 {
+        width: 70%; height: 60%;
+        background-image: url("../album/3-2.jpg");
+    }
+    .page-4-1 {
+        width: 30%; height: 30%; float: right!important;
+        background-image: url("../album/4-1.jpg");
+    }
+    .border-4-1 {
+        width: 2%; height: 30%; float: right!important;
+    }
+    .page-4-2 {
+        width: 30%; height: 30%; float: right!important;
+        background-image: url("../album/4-2.jpg");
+    }
+    .border-4-2 {
+        width: 100%; height: 1%;
+    }
+    .page-4-3 {
+        width: 100%; height: 50%;
+        background-image: url("../album/4-3.jpg");
+    }
+    .page-5-1 {
+        width: 100%; height: 60%;
+        background-image: url("../album/5-1.jpg");
+    }
+    .page-5-2 {
+        width: 60%; height: 40%;
+        background-image: url("../album/5-2.jpg");
+    }
+    .page-5-3 {
+        width: 40%; height: 40%;
+        background-image: url("../album/5-3.jpg");
+    }
+    .border-6-1 {
+        width: 100%; height: 21%;
+    }
+    .page-6-1 {
+        width: 50%; height: 79%;
+        background-image: url("../album/6-1.jpg");
+    }
+    .page-6-2 {
+        width: 50%; height: 79%;
+        background-image: url("../album/6-2.jpg");
+    }
+    .page-7-1 {
+        width: 100%; height: 60%;
+        background-image: url("../album/7-1.jpg");
+    }
+    .border-7-1 {
+        width: 100%; height: 1%;
+    }
+    .page-7-2 {
+        width: 30%; height: 39%;
+        background-image: url("../album/7-2.jpg");
+    }
+    .border-7-2 {
+        width: 2%; height: 39%;
+    }
+    .page-7-3 {
+        width: 40%; height: 39%;
+        background-image: url("../album/7-3.jpg"); background-size: auto 100%;
+    }
     .photo {
         height: 100%; float: left; display: block;
     }
@@ -75,32 +167,31 @@ body,html{height:100%;background-color:#000}
     }
     .text-2-area, .text-3-area, .text-3-area-1, .text-3-area-2,
     .text-4-area-1, .text-4-area-2, .text-6-area, .text-7-area {
-       position: absolute; text-align: center; line-height: 30px; background-color: #ddd;
+       position: absolute; line-height: 30px;
     }
     .text-2-area {
-        width: 265px; height: 165px; right: 0; top: 50%;
-        margin-top: -165px;
+        width: 60%; height: 19%; right: 0; top: 31%;
     }
     .text-3-area-1 {
-        width: 170px; height: 292px; left: 0; top: 0;
+        width: 48%; height: 39%; left: 0; top: 0;
     }
     .text-3-area-2 {
-        width: 135px; height: 435px; right: 0; bottom: 0;
+        width: 28%; height: 60%; right: 0; bottom: 0;
     }
     .text-4-area-1 {
-        width: 155px; height: 222px; left: 0; top: 0;
+        width: 36%; height: 30%; left: 0; top: 0;
     }
     .text-4-area-2 {
-        width: 100%; height: 155px; left: 0; bottom: 0;
+        width: 100%; height: 18%; left: 0; bottom: 0;
     }
     .text-6-area {
-        width: 100%; height: 200px; left: 0; top: 0;
+        width: 100%; height: 20%; left: 0; top: 0;
     }
     .text-7-area {
-        width: 110px; height: 290px; right: 0; bottom: 0;
+        width: 27%; height: 39%; right: 0; bottom: 0;
     }
     .text-span {
-        float: left; width: 90%; margin: auto;
+        float: left; width: 80%; margin-left: 10%; margin-top: 20px;
     }
     .text-wrap, .load-wrap {
         width: 100%; height: 100%; position: fixed; top: 0; left: 0;

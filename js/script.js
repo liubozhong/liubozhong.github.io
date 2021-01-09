@@ -64,9 +64,17 @@ var pages = function(obj) {
 
 function load() {
     max = 8;
-    for (var i = 2; i <= max; i++) {
-        $("#wrap2").append("<div class='page'><img class='photo' src='album/" + i + ".jpg' /></div>");
-    }
+    $('.load-wrap').hide();
+    $('.img-text').show();
+    pages({
+        wrap: 'text-wrap', //.wrap的id
+        wrap2: 'wrap2', //.wrap2的id
+        len: max, //一共有几页
+        n: 0 //页面一打开默认在第几页？第一页就是0，第二页就是1
+    });
+    // for (var i = 2; i <= max; i++) {
+    //    $("#wrap2").append("<div class='page'><img class='photo' src='album/" + i + ".jpg' /></div>");
+    // }
     $('.load-total').html(max);
     count = 0;
     $('.photo').each(function(i) {
