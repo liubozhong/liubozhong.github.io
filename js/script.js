@@ -35,7 +35,7 @@ var pages = function(obj) {
         }
         moveX = event.touches[0].pageX - startX;
         moveY = event.touches[0].pageY - startY;
-        box2.style.transform = 'translateY(' + (-n * cliH + moveY) + 'px)'; //根据手指的位置移动页面
+        // box2.style.transform = 'translateY(' + (-n * cliH + moveY) + 'px)'; //根据手指的位置移动页面
     };
     //touchEnd
     var touchend = function(event) {
