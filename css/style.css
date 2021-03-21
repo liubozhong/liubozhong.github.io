@@ -149,6 +149,9 @@ body,html{height:100%;background-color:#000}
     .text-1-title img {
         width: 200px;
     }
+    .addr-span {
+        font-size: 14px;
+    }
     .wedding-img {
         width: 200px;
     }
